@@ -59,10 +59,13 @@ tags: [websolute,team,javascript,JavaScript]
 
 
 * 리펙토링 : 코드 자체를 효율적으로 만들어 가독성을 높이는 작업
+
 1. this : 자기 자신을 가리키는 아이로 가독성을 높여줌
     ex)  `document.querySelector('#night_day').value` -> `this.value`
+
 2. 변수 설정 
     ex)   `var target=document.querySelector('body');`
+    
 3. 반복문과 배열
 ```javascript
   <input id="night_day" type="button" value="night" onclick="
@@ -133,7 +136,9 @@ ex) `person={"name":"sumin","age":"22"}`
 1. coworkers.showAll=function(){} 
     * 객체에 소속된 변수의 값으로 함수를 지정
     * 객체에 소속된 함수를 메소드(method)라고 함
+
 2. function showAll(){}
+
 3. var showAll=function(){}
 ```javascript
   var Body={
