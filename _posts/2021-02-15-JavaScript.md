@@ -124,31 +124,31 @@ tags: [websolute,team,javascript,JavaScript]
     }
 ```
 5. 객체
-*  객체: { } 로 표현 (배열: [ ]로 표현)
-ex) `person={"name":"sumin","age":"22"}`
--> key : property 관계로 표현 
+    *  객체: { } 로 표현 (배열: [ ]로 표현)
+    ex) `person={"name":"sumin","age":"22"}`
+    -> key : property 관계로 표현 
 
-* property (속성) : 객체에 소속된 변수
-객체 모든 키 값 & 속성 출력 ->
-`for( var key in coworkers){document.write(key+" : "+coworkers[key]+'<br>')}`
+    * property (속성) : 객체에 소속된 변수
+    객체 모든 키 값 & 속성 출력 ->
+    `for( var key in coworkers){document.write(key+" : "+coworkers[key]+'<br>')}`
 
-* 함수 정의 법
-    * coworkers.showAll=function(){} 
-        * 객체에 소속된 변수의 값으로 함수를 지정
-        * 객체에 소속된 함수를 메소드(method)라고 함
+    * 함수 정의 법
+        * coworkers.showAll=function(){} 
+            * 객체에 소속된 변수의 값으로 함수를 지정
+            * 객체에 소속된 함수를 메소드(method)라고 함
 
-    * function showAll(){}
+        * function showAll(){}
 
-    * var showAll=function(){}
-    ```javascript
-    var Body={
-        setColor:function(color){
-            document.querySelector('body').style.color=color;
+        * var showAll=function(){}
+        ```javascript
+        var Body={
+            setColor:function(color){
+                document.querySelector('body').style.color=color;
+            }
         }
-    }
-    ```
-    -> 이런 형식으로 객체 안의 변수를 함수로 지정하고 그 변수의 속성에 함수를 정의함
-  
+        ```
+        -> 이런 형식으로 객체 안의 변수를 함수로 지정하고 그 변수의 속성에 함수를 정의함
+    
 6. 파일로 묶어서 그룹핑
 * `<script></script>` 내부의 코드들을 color.js라는 파일에 저장
 -> `<script src="color.js"></script>` 만 있으면 사용 가능
