@@ -65,7 +65,7 @@ tags: [websolute,team,javascript,JavaScript]
 
 2. 변수 설정 
     ex)   `var target=document.querySelector('body');`
-    
+
 3. 반복문과 배열
 ```javascript
   <input id="night_day" type="button" value="night" onclick="
@@ -133,21 +133,21 @@ ex) `person={"name":"sumin","age":"22"}`
 `for( var key in coworkers){document.write(key+" : "+coworkers[key]+'<br>')}`
 
 * 함수 정의 법
-1. coworkers.showAll=function(){} 
-    * 객체에 소속된 변수의 값으로 함수를 지정
-    * 객체에 소속된 함수를 메소드(method)라고 함
+    1. coworkers.showAll=function(){} 
+        * 객체에 소속된 변수의 값으로 함수를 지정
+        * 객체에 소속된 함수를 메소드(method)라고 함
 
-2. function showAll(){}
+    2. function showAll(){}
 
-3. var showAll=function(){}
-```javascript
-  var Body={
-      setColor:function(color){
-          document.querySelector('body').style.color=color;
-      }
- }
- ```
--> 이런 형식으로 객체 안의 변수를 함수로 지정하고 그 변수의 속성에 함수를 정의함
+    3. var showAll=function(){}
+    ```javascript
+    var Body={
+        setColor:function(color){
+            document.querySelector('body').style.color=color;
+        }
+    }
+    ```
+    -> 이런 형식으로 객체 안의 변수를 함수로 지정하고 그 변수의 속성에 함수를 정의함
   
 6. 파일로 묶어서 그룹핑
 * `<script></script>` 내부의 코드들을 color.js라는 파일에 저장
