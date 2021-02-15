@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript
 color: rgb(239, 192, 80)
-tags: [websolute,team,javascript]
+tags: [websolute,team,javascript,JavaScript]
 ---
 
 #### Java Script 
