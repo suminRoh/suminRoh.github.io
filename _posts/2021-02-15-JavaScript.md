@@ -1,8 +1,8 @@
 ---
 layout: post
-title: HTML
+title: JavaScript
 color: rgb(239, 192, 80)
-tags: [websolute,team,HTML]
+tags: [websolute,team,javascript]
 ---
 
 #### Java Script 
