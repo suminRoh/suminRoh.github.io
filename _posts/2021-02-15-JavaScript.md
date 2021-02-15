@@ -133,13 +133,13 @@ ex) `person={"name":"sumin","age":"22"}`
 `for( var key in coworkers){document.write(key+" : "+coworkers[key]+'<br>')}`
 
 * 함수 정의 법
-    1. coworkers.showAll=function(){} 
+    * coworkers.showAll=function(){} 
         * 객체에 소속된 변수의 값으로 함수를 지정
         * 객체에 소속된 함수를 메소드(method)라고 함
 
-    2. function showAll(){}
+    * function showAll(){}
 
-    3. var showAll=function(){}
+    * var showAll=function(){}
     ```javascript
     var Body={
         setColor:function(color){
