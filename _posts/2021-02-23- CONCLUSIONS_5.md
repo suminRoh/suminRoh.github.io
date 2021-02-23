@@ -28,3 +28,6 @@ __명령어 만들기__
 
 __`<index.html>` 에서 title 바꾸기__
 -`<title>Movie App</title>` 
+
+
+__https://suminroh.github.io/movie_app_2021/ 링크로 내가 만든 Movie app 사이트 접속 가능 !!__
