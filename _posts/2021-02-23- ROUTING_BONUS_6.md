@@ -33,4 +33,4 @@ function App(){
 export default App; 
 ```
 - something이라는 문자만 나옴  
-- react-router dom을 통해 Home.js와 About,js에 접근하는 방법 알아야함 
+- react-router dom을 통해 `<Home.js>`와 `<About.js>`에 접근하는 방법 알아야함 
