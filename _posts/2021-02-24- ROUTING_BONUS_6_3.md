@@ -9,8 +9,6 @@ tags: [websolute,team,react,JSX]
 
 
 __route props__
-
-
 - __`<About.js>`__ 
 ```javascript
 function About(props){
