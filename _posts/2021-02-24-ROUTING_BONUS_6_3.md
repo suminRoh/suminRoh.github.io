@@ -63,6 +63,7 @@ function Movie({year,title,summary,poster,genres}){
 
 
 - __`<Detail.js>` 생성__
+
 ```javascript
 import React from 'react';
 
@@ -72,7 +73,6 @@ function Detail(props){
         Hello
     </span>;
 }
-
 export default Detail;
 ```
 __console - location -state를 보면 보내려고 했던 props들이 movie-detail 스크린에 주어진 것을 확인할 수 있음 !!!__
