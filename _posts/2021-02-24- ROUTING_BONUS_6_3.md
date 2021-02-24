@@ -19,7 +19,7 @@ function About(props){
    - 아직 about으로 전송되지 않은 react-router에 의해서 넣어진 props들
 
 
-- __Route에 있는 모든 router들은 props를 가짐__
+__Route에 있는 모든 router들은 props를 가짐__
 
 
 - __`<Movie.js>`__
