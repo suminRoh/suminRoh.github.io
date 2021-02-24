@@ -27,7 +27,7 @@ __Route에 있는 모든 router들은 props를 가짐__
 ```javascript
 function Movie({year,title,summary,poster,genres}){
     return (
-        <Link to={{
+        {% raw %}<Link to={{
             pathname:"/movie-detail",
             state:{
                 year,
@@ -36,7 +36,7 @@ function Movie({year,title,summary,poster,genres}){
                 poster,
                 genres
             }
-        }}>
+        }}>{% endraw %}
             <div className="movie">
                 <img src={poster} alt={title} title={title}/>
                 <div className="movie_data">
