@@ -21,7 +21,7 @@ function About(props){
 - About console에서 4개의 props를 볼 수 있음 (history, location, match, staticContext)
    - 아직 about으로 전송되지 않은 react-router에 의해서 넣어진 props들
 
-  
+
 - __Route에 있는 모든 router들은 props를 가짐__
 
 
@@ -76,4 +76,4 @@ function Detail(props){
 
 export default Detail;
 ```
-- console - location -state를 보면 보내려고 했던 props들이 movie-detail 스크린에 주어진 것을 확인할 수 있음 
+__console - location -state를 보면 보내려고 했던 props들이 movie-detail 스크린에 주어진 것을 확인할 수 있음 !!__
