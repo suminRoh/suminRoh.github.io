@@ -8,6 +8,7 @@ tags: [websolute,team,react,JSX]
 #### 6.4 Redirecting
 
 
+-__`<Detail.js>`
 ```javascript
 function Detail({location}){
     console.log(location);
