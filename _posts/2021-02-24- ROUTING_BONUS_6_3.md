@@ -53,6 +53,7 @@ function Movie({year,title,summary,poster,genres}){
         );
 } 
 ```
+
 - Movie들을 클릭하면 Link to를 이용해서 "/movie-detail"로 state에 적은 props들을 전송할 수 있음 
 
 
