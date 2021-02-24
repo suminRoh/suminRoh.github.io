@@ -12,7 +12,7 @@ tags: [websolute,team,react,JSX]
 __route props__
 
 
-- `<About.js>` 
+- __`<About.js>`__ 
 ```javascript
 function About(props){
     console.log(props);
@@ -25,6 +25,7 @@ function About(props){
 - __Route에 있는 모든 router들은 props를 가짐__
 
 
+- __`<Movie.js>`__
 ```javascript
 function Movie({year,title,summary,poster,genres}){
     return (
