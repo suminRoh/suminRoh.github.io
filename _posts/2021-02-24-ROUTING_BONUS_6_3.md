@@ -77,4 +77,4 @@ function Detail(props){
 
 export default Detail;
 ```
-__console - location -state를 보면 보내려고 했던 props들이 movie-detail 스크린에 주어진 것을 확인할 수 있음 !!__
+__console - location -state를 보면 보내려고 했던 props들이 movie-detail 스크린에 주어진 것을 확인할 수 있음 !!!__
