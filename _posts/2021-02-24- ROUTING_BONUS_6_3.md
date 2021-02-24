@@ -37,21 +37,21 @@ function Movie({year,title,summary,poster,genres}){
                 genres
             }
         }}>
-        <div className="movie">
-            <img src={poster} alt={title} title={title}/>
-            <div className="movie_data">
-                <h3 className="movie_title">{title}</h3>
-                <h5 className="movie_year">{year}</h5>
-                <ul className="genres">
-                    {genres.map((genre,index)=>(
-                        <li key={index} className="genres_genre">{genre}</li> 
-                    ))}
-                </ul>
-                <p className="movie_summary">{summary.slice(0,140)}...</p>
+            <div className="movie">
+                <img src={poster} alt={title} title={title}/>
+                <div className="movie_data">
+                    <h3 className="movie_title">{title}</h3>
+                    <h5 className="movie_year">{year}</h5>
+                    <ul className="genres">
+                        {genres.map((genre,index)=>(
+                            <li key={index} className="genres_genre">{genre}</li> 
+                        ))}
+                    </ul>
+                    <p className="movie_summary">{summary.slice(0,140)}...</p>
+                </div>
             </div>
-        </div>
         </Link>
-        );
+    );
 } 
 ```
 - Movie들을 클릭하면 Link to를 이용해서 "/movie-detail"로 state에 적은 props들을 전송할 수 있음 
