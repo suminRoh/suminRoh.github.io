@@ -8,7 +8,7 @@ tags: [websolute,team,react,JSX]
 #### 6.4 Redirecting
 
 
--__`<Detail.js>`
+- __`<Detail.js>`__
 ```javascript
 function Detail({location}){
     console.log(location);
@@ -50,7 +50,7 @@ export default Detail;
 
 
 - __해결 방법__
- 
+
  ```javascript
  if(location.state){
             return <span>{location.state.title}</span>;
