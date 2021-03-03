@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 6.3 Sharing Props Between Routes
+title: Styled_Components!
 color: rgb(239, 192, 80)
 tags: [websolute,team,react,JSX]
 ---
