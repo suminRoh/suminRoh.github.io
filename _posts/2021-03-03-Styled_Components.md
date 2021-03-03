@@ -94,8 +94,8 @@ text-decoration:none;
 - `import styled, { createGlobalStyle,keyframes} from "styled-components";` 추가
 
 - rotation 정의
-```javascript
 
+```javascript
 const rotation =keyframes`
   from{
     transform: rotate(0deg);
@@ -105,14 +105,16 @@ const rotation =keyframes`
 `;
 ```
 
--Button style에 추가
+- Button style에 추가
+
 ```javascript
   ${props=>{
     if(props.danger){
       return css`animation: 2s ${rotation} linear infinite`;
     }
   }};
-  ```
+```
+
 - props.danger인 경우, rotation을 하게 함
 
 
