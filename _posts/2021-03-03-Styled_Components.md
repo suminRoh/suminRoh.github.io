@@ -144,7 +144,7 @@ const awesomeCard=css`
 ```
 
 
-- 사용하고 싶은 곳의 스타일에 `  ${awesomeCard};` 추가
+- 사용하고 싶은 곳의 스타일에 `${awesomeCard};` 추가
 
 
 #### #6 Theming
