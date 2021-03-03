@@ -8,8 +8,8 @@ tags: [websolute,team,react,JSX]
 #### #1 셋업
 
 - __`<App.js>`__
-```javascript
 
+```javascript
 import React,{Component,Fragment} from "react"; 
 import "./App.css";
 class App extends Component{
@@ -23,12 +23,13 @@ class App extends Component{
   }
 }
 export default App;
-
 ```
+
 - class명 2개 사용 안좋음
 
 
 - __`<App.css>`__
+
 ```javascript
 .button{
     border-radius:50px;
@@ -54,6 +55,7 @@ export default App;
 
 
 #### #3 injectGlobal and Extend
+
 
 - __목표: margin을 바꾸기__
 
@@ -86,6 +88,8 @@ text-decoration:none;
 
 
 #### #4 Animations
+
+
 
 - `import styled, { createGlobalStyle,keyframes} from "styled-components";` 추가
 
