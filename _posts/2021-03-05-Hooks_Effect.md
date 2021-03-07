@@ -132,12 +132,12 @@ const App=()=>{
 ```
 - 버튼을 누르면 confirmDelete가 실행 
 - confirmDelete는 useConfirm실행해서 return confirmAction
-- confirlAction 실행 
+- confirlAction 실행 <br>
 
 
 
-- __usePreventLeave__
-    - window창을 닫을 때 아직 저장하지 않았냐고 물어봄
+ __usePreventLeave__
+  - window창을 닫을 때 아직 저장하지 않았냐고 물어봄
 
 
 ```javascript
@@ -206,9 +206,7 @@ const App=()=>{
 }
 ```
 
-
 ### 2.5 useFadeIn & useNetwork
-
 
 - __useFadeIn__
     - 자동으로 서서히 나타나게 만듦
