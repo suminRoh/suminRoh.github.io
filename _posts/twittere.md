@@ -1,0 +1,82 @@
+---
+layout: post
+title:  twitter
+color: rgb(239, 192, 80)
+tags: [websolute,team]
+---
+
+#### FireBase
+아주 빠르게 무언가를 시작할 수 있도록 도와줌(아이디어를 구상중일 때 많이 사용, 비즈니스 용으로는 많이 사용하지 않음)
+
+
+#### Securing the Keys
+- react app에서 환경변수를 설정하려면`REACT_APP_`으로 시작해야함
+- key들을 .env에 저장
+- __<.env>에 저장하는 이유?__
+    - <.gitignore> file에 .env를 작성한다면 .env에 쓴 키들은 git에 올라가지 않음 -> 보안상의 이유로 key,URL 들은 비공개
+    - 하지만 React application을 실행하면 서비스를 위해 빌드하고 웹사이트를 띄우면 create-react-app은 이 코드들을 실제 값들로 변환시켜 공개됨(단순히 github에 key를 업로드하지 않기 위함)
+
+
+#### Router Setup
+- Fragment (`<> </>`): 많은 요소들을 render하고 싶을 때 사용(부모 요소가 없을 때 )
+
+####  Authentication
+- `firebase.auth()` : Authentication 기능을 제공
+
+
+#### Login
+- onChange : 값이 바뀔때마다 사용
+    - argument인 event는 무슨 일이 일어났는지 확인해줌(target은 변경이 일어난 부분)
+    - input을 변경할 때마다 onchange function이 일어남 (input에서 value 받아옴)
+- hooks를 이용해 상태 체크와 value 넣어주기 위해 사용
+- `createUserWithEmailAndPassword`와 `signInWithEmailAndPassword`를 이용해 로그인
+- setPersistence : 사용자를 어떻게 기억할 것인지 선택하도록 도와줌 
+    - default로 local
+    - local : 브라우저를 닫더라도 사용자 정보는 기억될 것이라는 의미
+    - session : 탭이 열려있는 동안에는 사용자 정보를 기억할 것이라는 의미
+    - none : 유저정보를 기억하지 않는 것 
+- onAuthStateChanged : (evnt listener) 유저 상태에 변화가 있을 때 변화를 알아차림
+- signWithPopup : provider를 만들고 provider로 로그인 
+
+
+#### LogOut
+- ` const onLogOutClick=()=>authService.signOut();`: profile에서 logout 하는 기능 만들어줌 
+- 로그아웃했을 때 "/"로 이동하는 두가지 방법
+    1. `<Redirect from="*" to="/" /> ` 을 통해 "/" 이외의 다른 루트일 경우 "/"로 가도록 설정 (in router.js)
+    2. `const history=useHistory(); history.push("/");`를 이용해 onLogiytClick 눌렀을 때 로그아웃 되도록 설정 (in Profile.js)
+
+#### Form 
+-  `const {taget:{value},}=event` == `event.target.value` 를 통해 input에서 받은 value를 set함
+
+#### Database Set up
+- Cloud Firestore의 database는 NoSQL database
+    - collection (폴더와 같음) -> dociments의 그룹
+    - Document (컴퓨터에 있는 문서와 같은 텍스트)
+    - 하나의 database는 collection들을 가지고 있고 collection은 docment들을 가지고 있음 
+-  `dbService.collection("nweets").add();` : "nweets"라는 collection에 document ID를 자동으로 부여하며 새로운 document 추가 
+    - firebase.js에 firestore을 dbservice로 export한 후 , home.js에서 import 해서 사용 
+
+- `const dbNweets=await dbService.collection("nweets").get();`: "nweets"라는 collection의 documnets get
+    - dbNweets는 QueryDocumentSnapshot 형태이므로 `dbNweets.forEach(document=> console.log(document.data()))`를 이용해야 document들 확인 가능
+- `setNweets([prev=>document.data(), ...prev]);` : set을 쓰는 함수에서 값 대신에 함수를 전달할 수 있음 -> 만약 함수를 전달하면 리액트는 이전 값에 접근할 수 있게 해줌 
+    - dbNweets에 있는 모든 document에 대해 setNweets에서 함수를 사용하고 있는데 배열을 리턴, 이 배열에서 첫 번째 요소는 가장 최근 documet이고, 그 뒤로 이전 documet를 붙임  
+
+```javascript
+    const [nweets,setNweets]=useState([]);
+    const getNweets=async()=>{
+        const dbNweets=await dbService.collection("nweets").get();
+        dbNweets.forEach((document)=>{
+            //dbNweets에 있는 모든 document에 대해 setNweets에서 함수를 사용하고 있는데 배열을 리턴, 이 배열에서 첫 번째 요소는 가장 최근 documet이고, 그 뒤로 이전 documet를 붙임  
+            setNweets(prev=>[document.data(), ...prev]);//set을 쓰는 함수에서 값 대신에 함수를 전달할 수 있음 -> 만약 함수를 전달하면 리액트는 이전 값에 접근할 수 있게 해줌 
+        });
+        /*dbNweets는 QueryDocumentSnapshot 형태이므로 
+        dbNweets.forEach(document=> console.log(document.data()))를 이용해야
+        document들 확인 가능 
+        */
+    };
+    useEffect(()=>{
+        getNweets();
+    },[]);
+```
+
+- 
